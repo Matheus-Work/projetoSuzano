@@ -3,8 +3,8 @@
     include "database.php";
 
     
-    $users_id = $_POST['users_id'];
-    $users_login = $_POST['users_login'];
+    $locais_pais = $_POST['locais_pais'];
+    $locais_estado = $_POST['locais_estado'];
     $users_password = $_POST['users_password'];
     $users_profile = $_POST['users_profile'];
   
@@ -21,5 +21,5 @@
         header("Location: listar_colaborador.php");
     }
     else{
-        echo "Falha ao cadastrar no banco de dados";
+        echo "Falha ao atualizar no banco de dados";
     }

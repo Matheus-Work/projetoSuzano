@@ -20,5 +20,5 @@
         header("Location: listar_produtos.php");
     }
     else{
-        echo "Falha ao cadastrar no banco de dados";
+        echo "Falha ao atualizar no banco de dados";
     }

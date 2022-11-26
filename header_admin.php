@@ -55,10 +55,20 @@
       <li><a class="dropdown-item" href="listar_produtos.php">Listar Produtos</a></li>
     </ul>
    </li>
-    
-    <li class="nav-item">
-      <a class="nav-link" href="#">Fale Conosco</a>
-    </li>
+   <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Locais</a>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="form_cadastra_locais.php">Cadastrar Locais</a></li>
+      <li><a class="dropdown-item" href="listar_locais.php">Listar Locais</a></li>
+    </ul>
+   </li>
+   <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Logísticas</a>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="form_cadastra_logisticas.php">Cadastrar Logísticas</a></li>
+      <li><a class="dropdown-item" href="listar_logisticas.php">Listar Logísticas</a></li>
+    </ul>
+   </li>
   </ul>
 </nav>
 <img src="img/logosuzano.png" class="imglogo" alt="logo"> 

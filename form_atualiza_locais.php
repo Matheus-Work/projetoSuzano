@@ -1,17 +1,16 @@
 <?php       
     include("database.php");
 
-    $users_id= $_GET["id"];
+    $locais_id= $_GET["id"];
 
-    $consulta_por_id = "SELECT * FROM `matheus_suzano_users` WHERE users_id ='$users_id'";
+    $consulta_por_id = "SELECT * FROM `matheus_suzano_locais` WHERE locais_id ='$locais_id'";
 
     $resultado_por_id = mysqli_query($conexao, $consulta_por_id);
 
-    $atualiza_colaborador = mysqli_fetch_assoc($resultado_por_id);
+    $atualiza_locais = mysqli_fetch_assoc($resultado_por_id);
 
     require("header_admin.php");
 ?>
-
 <style>
     * {box-sizing: border-box}
 
@@ -79,26 +78,26 @@ a {
     }
 </style>
 <br><br>
-<p class="letra">Atualizar Colaborador</p>
+<p class="letra">Atualizar Locais</p>
     
-    <form action="atualiza_cadastro.php" method="post">
+    <form action="atualiza_locais.php" method="post">
     <div class="container">
 
-    <input type="hidden" name="users_id" value="<?php echo $atualiza_colaborador['users_id'];?>">
+    <input type="hidden" name="locais_id" value="<?php echo $atualiza_locais['locais_id'];?>">
 
-    <label for="nome_login">Login: </label>
-    <input type="text" name="users_login" id="users_login" value="<?php echo $atualiza_colaborador['users_login'];?>"><br><br>
+    <label for="locais_pais">País: </label>
+    <input type="text" name="locais_pais" id="locais_pais" value="<?php echo $atualiza_locais['locais_pais'];?>"><br><br>
 
-    <label for="password_login">Password:</label>
-    <input type="text" name="users_password" id="users_password" value="<?php echo $atualiza_colaborador['users_password'];?>"><br><br>
+    <label for="locais_estado">Estado: </label>
+    <input type="text" name="locais_estado" id="locais_estado" value="<?php echo $atualiza_locais['locais_estado'];?>"><br><br>
 
-    <label for="profile_login">Perfil de acesso: </label>
-    <select name="users_profile" id="users_profile"value="<?php echo $atualiza_colaborador['users_profile'];?>">
-    <option value=""></option>
-    <option value="admin">Administrador</option>
-    <option value="colaborador">Colaborador</option>
-    </select><br><br>
-  <button type="submit" class="registerbtn">Atualizar Colaborador</button>
+    <label for="locais_cidade">Cidade: </label>
+    <input type="text" name="locais_cidade" id="locais_cidade" value="<?php echo $atualiza_locais['locais_cidade'];?>"><br><br>
+
+    <label for="locais_unidade">Unidade: </label>
+    <input type="text" name="locais_unidade" id="locais_unidade" value="<?php echo $atualiza_locais['locais_unidade'];?>"><br><br>
+
+  <button type="submit" class="registerbtn">Atualizar Local</button>
   </div>
 </form>
 <?php       

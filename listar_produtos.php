@@ -42,7 +42,7 @@
               <?php } ?>
           </tbody>
         </table>
-
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <?php       
     require("footer.php");
 ?>

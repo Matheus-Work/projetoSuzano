@@ -5,3 +5,6 @@
     define('DATABASENAME','ads_manha2a');
     
     $conexao = mysqli_connect(HOSTNAME,HOSTUSER,HOSTPASSWORD,DATABASENAME);
+
+    //logistica: id/empresa/tipo/tempocontrato/valor
+    //locais: id/país/estado/cidade/unidade
